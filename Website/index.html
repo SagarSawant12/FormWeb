@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIES GST Nerul - College Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="SIES GST Nerul Logo" />
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Courses</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Empowering the Future of Innovation</h1>
+      <p class="hero-subtitle">SIES Graduate School of Technology, Nerul</p>
+      <div class="btn-container">
+        <a href="#form-section" class="btn hero-btn">Join Us Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internship Form Section -->
+  <section id="form-section" class="form-container">
+    <h2>Internship Details</h2>
+    
+    <form action="internship.php" method="POST">
+      <label for="serialNo">Serial No.</label>
+      <input type="text" id="serialNo" name="serialNo" required>
+
+      <label for="studentName">Name of the Student</label>
+      <input type="text" id="studentName" name="studentName" required>
+
+      <label for="year">Year</label>
+      <select id="year" name="year">
+        <option value="se">SE</option>
+        <option value="te">TE</option>
+        <option value="be">BE</option>
+      </select>
+
+      <label for="company">Company Name and Location</label>
+      <input type="text" id="company" name="company" required>
+
+      <label for="workDetails">Work Details</label>
+      <textarea id="workDetails" name="workDetails"></textarea>
+
+      <label for="stipend">Stipend (in Rupees)</label>
+      <input type="number" id="stipend" name="stipend">
+
+      <label for="duration">Duration</label>
+      <input type="text" id="duration" name="duration">
+
+      <label for="fromDate">From Date</label>
+      <input type="date" id="fromDate" name="fromDate">
+
+      <label for="toDate">To Date</label>
+      <input type="date" id="toDate" name="toDate">
+
+      <label for="internshipType">Internship Type</label>
+      <select id="internshipType" name="internshipType">
+        <option value="internal">Internal</option>
+        <option value="external">External</option>
+      </select>
+
+      <div id="internalOptions" style="display: none;">
+        <label for="internalType">If Internal</label>
+        <select id="internalType" name="internalType">
+          <option value="sdp">SDP</option>
+          <option value="byProject">By Project</option>
+        </select>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById("internshipType").addEventListener("change", function () {
+      const internalOptions = document.getElementById("internalOptions");
+      if (this.value === "internal") {
+        internalOptions.style.display = "block";
+      } else {
+        internalOptions.style.display = "none";
+      }
+    });
+  </script>
+
+</body>
+</html>

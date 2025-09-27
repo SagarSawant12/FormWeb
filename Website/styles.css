@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #181818; /* Dark background */
+  color: #fff;
+}
+
+/* Header */
+.header {
+  background-color: #0a0a0a;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+/* Logo */
+.logo img {
+  width: 150px;
+}
+
+/* Navigation */
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li {
+  display: inline-block;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  color: #4CAF50;
+}
+
+/* Hero Section */
+.hero {
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+/* Adjust Hero Title and Subtitle */
+.hero-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Move Button Down */
+.btn-container {
+  margin-top: 40px; /* Increased space between text and button */
+}
+
+/* Adjust Hero Button */
+.hero-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #45a049;
+}
+
+/* Form Section */
+.form-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #222;
+  border-radius: 8px;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
